@@ -3,7 +3,7 @@ package filaEncadeada;
 public class filaString {
     private class NO {
         String dado;
-        filaString.NO prox;
+        NO prox;
     }
 
     private NO ini, fim;
