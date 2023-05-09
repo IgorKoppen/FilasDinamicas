@@ -17,6 +17,19 @@ public class MainTeste {
             System.out.println("Informe valor positivo (negativo para encerrar): ");
             valor = teclado.nextInt();
         }
+        System.out.println("Digite o numero que deseja remover:");
+        int elem = teclado.nextInt();
+while (elem>=0) {
+    System.out.println("Digite o numero que deseja remover:");
+    elem = teclado.nextInt();
+    if (lista.remove(elem))
+        System.out.println("Valor retirado!");
+    else {
+        System.out.println("Valor nao esta na lista!");
+    }
+    lista.apresenta();
+
+}
 
         teclado.close();
     }
