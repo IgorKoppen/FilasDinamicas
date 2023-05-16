@@ -30,7 +30,10 @@ while (elem>=0) {
     lista.apresenta();
 
 }
-
+        int limite =0;
+        System.out.println("Digite o limite inferior: ");
+        limite = teclado.nextInt();
+        lista.apresentaMaiores(limite);
         teclado.close();
     }
 }

@@ -6,7 +6,6 @@ public class ListaOrdenada {
         NO prox;
 
     }
-   public static int numbofElem = 1;
     private NO lista = null;
 
     public boolean isEmpty() {
@@ -37,7 +36,7 @@ public class ListaOrdenada {
                 }
                 novo.prox = aux.prox;
                 aux.prox = novo;
-                numbofElem++;
+
             }
         }
     }
@@ -52,7 +51,6 @@ public class ListaOrdenada {
                 while(aux.prox != null && !achou){
                     if(aux.prox.dado != elem){
                         aux = aux.prox;
-                        numbofElem--;
                     }else{
                         achou = true;
                         aux.prox = aux.prox.prox;
@@ -62,7 +60,27 @@ public class ListaOrdenada {
             return achou;
 
         }
+public int contaNos(){
+        int count = 0;
+        NO aux = lista;
+        while(aux!=null){
+            count++;
+            aux = aux.prox;
+        }
+        return count;
+}
+public void apresentaMaiores(int limite){
+        NO aux = lista;
+    System.out.println("Valores maiores do que "+ limite + ": ");
+        while(aux!=null){
+            if(aux.dado > limite){
+                System.out.println("\t" + aux.dado);
+            }
+            aux = aux.prox;
+        }
 
+    System.out.println();
+}
 public void apresenta(){
         NO aux = lista;
     System.out.println("Lista:");
@@ -70,7 +88,7 @@ public void apresenta(){
             System.out.println("\t "+ aux.dado);
             aux = aux.prox;
         }
-    System.out.println(numbofElem);
+    System.out.println(contaNos());
 }
 
 }
